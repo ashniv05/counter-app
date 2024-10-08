@@ -44,7 +44,7 @@ export class counterApp extends DDDSuper(LitElement) {
       }
       .counter {
         font-size: 48px;
-        color: black;
+        color: white;
       }
       .counter.red {
         color: red;
@@ -89,12 +89,7 @@ export class counterApp extends DDDSuper(LitElement) {
   }
 
   render() {
-    const counterClass = this.counter === 18 
-      ? 'counter green' 
-      : (this.counter === 21 || this.counter === this.max || this.counter === this.min) 
-        ? 'counter red' 
-        : 'counter';
-  
+    const counterClass = this.counter === 18 ? 'counter green' : this.counter === 21 || this.counter === this.max || this.counter === this.min ? 'counter red' : 'counter';
     return html`
       <div class="wrapper">
         <div class="${counterClass}">${this.counter}</div>
@@ -106,4 +101,4 @@ export class counterApp extends DDDSuper(LitElement) {
   }
 }
 
-globalThis.customElements.define(counterApp.tag, counterApp);
+customElements.define(counterApp.tag, counterApp);

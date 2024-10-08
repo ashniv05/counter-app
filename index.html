@@ -28,20 +28,7 @@
       background-color: var(--ddd-accent-2);
       color: var(--ddd-primary-17);
     }
-    .counterDisplay {
-      font-size: 48px;
-      margin-bottom: 16px;
-    }
-    .buttons {
-      display: flex;
-    }
-    button {
-      font-size: 24px;
-      padding: 8px 16px;
-    }
-    button:hover {
-      background-color: black;
-    }
+    
     
   </style>
   <title>counter-app</title>
@@ -58,7 +45,9 @@
   <div id="demo">
     <h1>counter-app</h1>
     <!-- this is going to do whatever the tag's defaults are -->
-    <h2>Counter Values</h2>
+    <h3>Counter</h3>
+    <counter-app counter="16" min="10" max="25"></counter-app>
+  <h3>Counter</h3>
     <counter-app counter="16" min="10" max="25"></counter-app>
   </div>
   <script type="module" src="./src/counter-app.js"></script>
